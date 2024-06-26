@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/fatma', function () {
+Route::get('/fatmaa', function () {
     return view('welcome');
 });
 
