@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contrats extends Model
 {
     use HasFactory;
-    protected $fillable = [
+    protected $fillable = [ test
         'client_id', 'numero_contrat', 'date_debut', 'date_fin', 'details'
     ];
      // Relation avec le modèle Client
