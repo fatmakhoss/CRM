@@ -16,7 +16,7 @@ return new class extends Migration
         $table->unsignedBigInteger('client_id');
         $table->String('type');
         $table->timestamp('date');
-        $table->timestamp('rappel')->nullable();
+        $table->timestamp('rappel');
         $table->timestamps();
         $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
       });
