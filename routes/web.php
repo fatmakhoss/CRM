@@ -17,3 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+use App\Http\Controllers\ClientsController ;
+Route::resource('clients', ClientsController::class);
+
+use App\Http\Controllers\interactionsController;
+
+Route::apiResource('Interactions',InteractionsController::class);
+
+use App\Http\Controllers\ContratsController;
+Route::apiResource('contrats', ContratsController::class);
+
+use App\Http\Controllers\RendezVousController;
+Route::apiResource('RendezVous', RendezVousController::class);
+

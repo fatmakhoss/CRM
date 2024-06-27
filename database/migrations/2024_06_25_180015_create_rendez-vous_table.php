@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('rendez_vous', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('client_id');
-            $table->timestamp('date_rendez_vous');
+            $table->date('date_rendez_vous');
             $table->string('lieu');
             $table->text('description');
             $table->timestamps();

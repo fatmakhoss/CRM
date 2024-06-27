@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id');
             $table->string('numero_contrat');
-            $table->timestamp('date_debut');
-            $table->timestamp('date_fin');
+            $table->date('date_debut');
+            $table->date('date_fin');
             $table->text('details');
             $table->timestamps();
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
