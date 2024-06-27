@@ -23,11 +23,11 @@ Route::resource('clients', ClientsController::class);
 
 use App\Http\Controllers\interactionsController;
 
-Route::apiResource('Interactions',InteractionsController::class);
+Route::ressource('Interactions',InteractionsController::class);
 
 use App\Http\Controllers\ContratsController;
-Route::apiResource('contrats', ContratsController::class);
+Route::ressource('contrats', ContratsController::class);
 
 use App\Http\Controllers\RendezVousController;
-Route::apiResource('RendezVous', RendezVousController::class);
+Route::ressource('RendezVous', RendezVousController::class);
 
