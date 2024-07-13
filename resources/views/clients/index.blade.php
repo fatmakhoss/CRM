@@ -1,5 +1,8 @@
-@extends('layouts.base')
-@section('content')
+{{-- @extends('layouts.base') --}}
+{{-- @section('content') --}}
+@extends('design.navbar')
+@extends('design.footer')
+@extends('design.header')
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -13,7 +16,7 @@
                                 {{ session('success') }}
                             </div>
                         @endif
-
+                        <p>Nombre total de clients : {{ $clientsCount }}</p>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -26,7 +29,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($clientsCount as $client)
+                                @forelse ($clients as $client)
                                     <tr>
                                         <td>{{ $client->id }}</td>
                                         <td>{{ $client->nom }}</td>
@@ -55,5 +58,5 @@
             </div>
         </div>
     </div>
-    @endsection
+
 

@@ -13,7 +13,7 @@ class interactionsController extends Controller
 {
     public function index()
     {
-        $interactions = interactions::all();
+        $interactionsCount = interactions::all();
         return view('interactions.index', compact('interactionsCount'));
     }
 

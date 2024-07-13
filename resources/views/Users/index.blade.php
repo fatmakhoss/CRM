@@ -13,7 +13,7 @@
                                 <th>ID</th>
                                 <th>Nom d'utilisateur</th>
                                 <th>Email</th>
-                                <th>Date de création</th>
+                                <th>Date</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>

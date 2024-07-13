@@ -14,7 +14,7 @@
 
                     <div class="form-group">
                         <label for="nom_utilisateur">Nom d'utilisateur</label>
-                        <p>{{ $users->nom_utilisateur }}</p>
+                        <p>{{ $users->name }}</p>
                     </div>
 
                     <div class="form-group">
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="created_at">Date de création</label>
+                        <label for="created_at">Date</label>
                         <p>{{ $users->created_at ? $users->created_at->format('d/m/Y H:i') : 'N/A' }}</p>
                     </div>
 

@@ -9,8 +9,8 @@ class ContratsController extends Controller
 
     public function index()
     {
-        $contrats = Contrats::with('client')->get();
-        return view('contrats.index', compact('contratscount'));
+        $contratsCount= Contrats::with('client')->get();
+        return view('contrats.index', compact('contratsCount'));
     }
 
     public function create()

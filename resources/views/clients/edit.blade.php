@@ -38,7 +38,7 @@
                                 <label for="telephone">Téléphone</label>
                                 <input type="text" name="telephone" id="telephone" class="form-control" value="{{ old('telephone', $clients->telephone) }}" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" class="form-control" value="{{ old('email', $clients->email) }}" required>

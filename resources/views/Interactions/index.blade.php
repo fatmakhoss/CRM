@@ -1,6 +1,8 @@
-@extends('layouts.base')
-@section('content')
-
+{{-- @extends('layouts.base')
+@section('content') --}}
+@extends('design.navbar')
+@extends('design.footer')
+@extends('design.header')
 <div class="container">
     <div class="row">
             <div class="col-md-12">
@@ -27,7 +29,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($interactionscount as $interaction)
+                                @forelse ($interactionsCount as $interaction)
                                     <tr>
                                         <td>{{ $interaction->id }}</td>
                                         <td>{{ $interaction->client->nom }}</td>

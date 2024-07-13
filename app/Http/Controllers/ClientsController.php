@@ -9,9 +9,9 @@ use App\Models\Clients;
 class ClientsController extends Controller
 {
     public function index()
-    {
-        $clientsCount = Clients::all();
-        return view('clients.index', compact('clientsCount'));
+    {  $clients= clients::all();
+        $clientsCount = $clients->count();
+        return view('clients.index', compact('clients','clientsCount'));
     }
     public function create()
     {
@@ -48,6 +48,7 @@ class ClientsController extends Controller
     }
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',

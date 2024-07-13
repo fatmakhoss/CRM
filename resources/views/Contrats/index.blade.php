@@ -1,5 +1,8 @@
-@extends('layouts.base')
-@section('content')
+{{-- @extends('layouts.base')
+@section('content') --}}
+@extends('design.navbar')
+@extends('design.footer')
+@extends('design.header')
 <div class="container">
     <h1>Liste des Contrats</h1>
     <a href="{{ route('contrats.create') }}" class="btn btn-primary mb-3">Ajouter un Contrat</a>
@@ -22,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($contratscount as $contrat)
+            @foreach($contratsCount as $contrat)
                 <tr>
                     <td>{{ $contrat->id }}</td>
                     <td>{{ $contrat->client->name }}</td>
@@ -43,5 +46,5 @@
         </tbody>
     </table>
 </div>
-@endsection
+
 

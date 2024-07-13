@@ -13,7 +13,7 @@
 
                         <div class="form-group">
                             <label for="nom_utilisateur">Nom d'utilisateur</label>
-                            <input type="text" name="nom_utilisateur" id="nom_utilisateur" class="form-control @error('nom_utilisateur') is-invalid @enderror" value="{{ old('nom_utilisateur', $users->nom_utilisateur) }}" required>
+                            <input type="text" name="nom_utilisateur" id="nom_utilisateur" class="form-control @error('nom_utilisateur') is-invalid @enderror" value="{{ old('name', $users->name) }}" required>
                             @error('nom_utilisateur')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

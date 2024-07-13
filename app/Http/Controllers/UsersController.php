@@ -25,6 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
+        $clients = Clients::all();
         return view('users.create');
     }
 
@@ -75,15 +76,15 @@ class UsersController extends Controller
 
         $validatedData = $request->validate([
             'nom_utilisateur' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:utilisateurs,email,' . $users->id,
+            'email' => 'required|string|email|max:255|unique:users,email,' . $users->id,
             'mot_de_passe' => 'nullable|string|min:8',
         ]);
 
-        $users->nom_utilisateur = $validatedData['nom_utilisateur'];
+        $users->name = $validatedData['nom_utilisateur'];
         $users->email = $validatedData['email'];
 
         if (!empty($validatedData['mot_de_passe'])) {
-            $users->mot_de_passe = bcrypt($validatedData['mot_de_passe']);
+            $users->password = bcrypt($validatedData['mot_de_passe']);
         }
 
         $users->save();
