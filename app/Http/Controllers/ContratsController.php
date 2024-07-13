@@ -1,16 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;use App\Models\Contrats;
-use Illuminate\Http\Request;
+namespace App\Http\Controllers;use Illuminate\Http\Request;
+use App\Models\Contrats;
+use App\Models\Clients;
 
 class ContratsController extends Controller
 {
+
     public function index()
     {
-        $contrats = Contrats::all();
-        return response()->json($contrats);
+        $contrats = Contrats::with('client')->get();
+        return view('contrats.index', compact('contratscount'));
+    }
+
+    public function create()
+    {
+        $clients = Clients::all();
+        return view('contrats.create', compact('clients'));
     }
 
     public function store(Request $request)
@@ -20,17 +26,24 @@ class ContratsController extends Controller
             'numero_contrat' => 'required|string',
             'date_debut' => 'required|date',
             'date_fin' => 'required|date',
-            'details' => 'required|string',
+            'details' => 'nullable|string',
         ]);
 
         $contrat = Contrats::create($request->all());
-        return response()->json($contrat, 201);
+        return redirect()->route('contrats.index')->with('success', 'Contrat créé avec succès.');
     }
 
     public function show($id)
     {
         $contrat = Contrats::findOrFail($id);
-        return response()->json($contrat);
+        return view('contrats.show', compact('contrat'));
+    }
+
+    public function edit($id)
+    {
+        $contrat = Contrats::findOrFail($id);
+        $clients = Clients::all();
+        return view('contrats.edit', compact('contrat', 'clients'));
     }
 
     public function update(Request $request, $id)
@@ -40,19 +53,19 @@ class ContratsController extends Controller
             'numero_contrat' => 'required|string',
             'date_debut' => 'required|date',
             'date_fin' => 'required|date',
-            'details' => 'required|string',
+            'details' => 'nullable|string',
         ]);
 
         $contrat = Contrats::findOrFail($id);
         $contrat->update($request->all());
-        return response()->json($contrat, 200);
+        return redirect()->route('contrats.index')->with('success', 'Contrat mis à jour avec succès.');
     }
 
     public function destroy($id)
     {
         $contrat = Contrats::findOrFail($id);
         $contrat->delete();
-        return response()->json(null, 204);
+        return redirect()->route('contrats.index')->with('success', 'Contrat supprimé avec succès.');
     }
 }
 
