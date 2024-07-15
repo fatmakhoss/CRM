@@ -1,4 +1,4 @@
-@extends('layouts.base')
+ @extends('layouts.base')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <label for="telephone">Téléphone</label>
-                                <input type="text" name="telephone" id="telephone" class="form-control" value="{{ old('telephone') }}" required>
+                                <input type="tel" name="telephone" id="telephone" class="form-control" value="{{ old('telephone') }}" required>
                             </div>
 
                             <div class="form-group">

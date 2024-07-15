@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientsController ;
 Route::get('clients', [ClientsController::class,'index'])->name('clients.index');
 Route::get('/clients/create', [ClientsController::class, 'create'])->name('clients.create');
+Route::post('/clients/store', [ClientsController::class, 'create'])->name('clients.store');
 Route::get('/clients/show/{id}', [ClientsController::class, 'show'])->name('clients.show');
 Route::get('/clients/edit/{id}', [ClientsController::class, 'edit'])->name('clients.edit');
 Route::put('/clients/update/{id}', [ClientsController::class, 'update'])->name('clients.update');
@@ -96,7 +97,6 @@ Route::post('twilioService/send', [twilioServiceController::class, 'sendSms'])->
  Route::get('/', function () {
  return view('temp.adm');
 });
-//use App\Http\Controllers\tempController;
-//Route::get('/', [tempController::class, 'index1'])->name('temp.index');
+
 
 

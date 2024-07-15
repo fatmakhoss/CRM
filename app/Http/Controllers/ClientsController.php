@@ -23,7 +23,7 @@ class ClientsController extends Controller
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'adresse' => 'required|string|max:255',
-            'telephone' => 'required|string|max:15',
+            'telephone' => 'required|number|max:15',
             'email' => 'required|string|email|max:255|unique:clients',
         ]);
         $clients = new Clients();
@@ -53,7 +53,7 @@ class ClientsController extends Controller
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'adresse' => 'required|string|max:255',
-            'telephone' => 'required|string|max:15',
+            'telephone' => 'required|number|max:15',
             'email' => 'required|string|email|max:255|unique:clients,email,' . $id,
         ]);
         $clients = Clients::findOrFail($id);

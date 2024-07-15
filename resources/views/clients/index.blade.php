@@ -34,7 +34,7 @@
                                         <td>{{ $client->id }}</td>
                                         <td>{{ $client->nom }}</td>
                                         <td>{{ $client->adresse }}</td>
-                                        <td>{{ $client->numero_telephone }}</td>
+                                        <td>{{ $client->telephone }}</td>
                                         <td>{{ $client->email }}</td>
                                         <td>
                                             <a href="{{ route('clients.show', $client->id) }}" class="btn btn-primary btn-sm">Voir</a>
