@@ -90,5 +90,5 @@
             modal.find('.modal-footer #deleteForm').attr('action', action)
         })
     </script>
-        @endsection
+
 
