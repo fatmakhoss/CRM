@@ -9,33 +9,21 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $users=Users::all();
         return view('users.index', compact('users'));
     }
-
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $clients = Clients::all();
         return view('users.create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
-            'nom_utilisateur' => 'required|string|max:255',
+            'nom_utilisateur' => 'required',
             'mot_de_passe' => 'required|string|min:8',
             'email' => 'required|string|email|max:255|unique:utilisateurs',
         ]);
@@ -48,39 +36,33 @@ class UsersController extends Controller
         return redirect()->route('users.index')->with('success', 'User créé avec succès.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         $users =Users::findOrFail($id);
         return view('users.show', compact('users'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
         $users = Users::findOrFail($id);
         return view('users.edit', compact('users'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, $id)
     {
         $users = Users::findOrFail($id);
 
 
         $validatedData = $request->validate([
-            'nom_utilisateur' => 'required|string|max:255',
+            'nom_utilisateur' => 'required',
             'email' => 'required|string|email|max:255|unique:users,email,' . $users->id,
             'mot_de_passe' => 'nullable|string|min:8',
         ]);
 
-        $users->name = $validatedData['nom_utilisateur'];
+        $users->nom_utilisateur = $validatedData['nom_utilisateur'];
         $users->email = $validatedData['email'];
 
         if (!empty($validatedData['mot_de_passe'])) {
@@ -92,10 +74,6 @@ class UsersController extends Controller
         return redirect()->route('users.index')->with('success', 'Utilisateur mis à jour avec succès');
     }
 
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $users= Users::findOrFail($id);

@@ -22,7 +22,6 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->nom_utilisateur }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->created_at ? $user->created_at->format('d/m/Y H:i') : 'N/A' }}</td>
                                     <td>
                                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-info">Voir</a>
                                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">

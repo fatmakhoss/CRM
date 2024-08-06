@@ -3,14 +3,14 @@
 
     <h1>Modifier l'Utilisateur</h1>
 
-    <form action="{{ route('admin.users.update', $user->id) }}" method="POST">
+    <form action="{{ route('admin.users.update', $users->id) }}" method="POST">
         @csrf
         @method('PUT') {{-- Utilisation de PUT pour la méthode de mise à jour --}}
 
         <div class="form-group">
-            <label for="name">Nom</label>
-            <input type="text" name="name" id="name" class="form-control" value="{{ old('name', $user->name) }}">
-            @error('name')
+            <label for="nom_utilisateur">Nom utilisateur</label>
+            <input type="text" name="nom_utilisateur" id="nom_utilisateur" class="form-control" value="{{ old('nom_utilisateur', $user->nom_utilisateur) }}">
+            @error('nom_utilisateur')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>

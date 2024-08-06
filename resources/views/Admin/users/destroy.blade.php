@@ -11,14 +11,15 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nom</th>
+                    <th>Nom utilisateur</th>
                     <th>Email</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>{{ $users->id }}</td>
-                    <td>{{ $users->name }}</td>
+                    <td>{{ $users->nom_utilisateur}}</td>
                     <td>{{ $users->email }}</td>
                 </tr>
             </tbody>
