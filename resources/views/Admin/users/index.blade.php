@@ -6,7 +6,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nom d'utilisateur</th>
+                <th>Nom utilisateur</th>
                 <th>Email</th>
                 <th>Actions</th>
             </tr>
@@ -17,7 +17,7 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->nom_utilisateur }}</td>
                 <td>{{ $user->email }}</td>
-                <td>{{ $user->created_at }}</td>
+                
                 <td>
                     <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning">edit</a>
                     <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" style="display:inline;">

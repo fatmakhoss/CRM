@@ -7,7 +7,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <form method="POST" action="{{ route('admin.users.usersupdate', $users->id) }}">
+    <form method="POST" action="{{ route('admin.users.usersupdate', ['id' => $setting->id]) }}">
         @csrf
         <button type="submit" class="btn btn-primary">Enregistrer</button>
         <a href="{{ route('admin.users.usersupdate') }}" class="btn btn-secondary">Retour</a>

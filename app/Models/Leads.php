@@ -11,7 +11,6 @@ class Leads extends Model
     protected $fillable = [
         'client_id', 'date', 'lieu', 'description'
     ];
-    // Relation avec le modèle Client
     public function client()
     {
         return $this->belongsTo(Clients::class);

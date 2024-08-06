@@ -1,8 +1,6 @@
 {{-- @extends('layouts.base')
 @section('content') --}}
-@extends('design.navbar')
-@extends('design.footer')
-@extends('design.header')
+
     <div class="container">
         <div class="row">
             <div class="col-md-4">

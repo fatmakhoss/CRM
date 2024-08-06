@@ -13,8 +13,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="nom_utilisateur">Nom d'utilisateur</label>
-                        <p>{{ $users->name }}</p>
+                        <label for="nom_utilisateur">Nom utilisateur</label>
+                        <p>{{ $users->nom_utilisateur }}</p>
                     </div>
 
                     <div class="form-group">

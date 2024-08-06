@@ -28,7 +28,6 @@ class twilioServiceController extends Controller
             return redirect()->back()
                         ->withErrors($validator)
                         ->withInput();
-        // Si la validation réussit, vous pouvez traiter les données
         $from = $request->input('From');;
         $body = $request->input('body');;
         return response()->json(['message' => 'Message envoyé avec succès'], 200);

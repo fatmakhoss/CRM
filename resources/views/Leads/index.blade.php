@@ -1,9 +1,5 @@
-{{-- @extends('layouts.base')
-@section('content') --}}
-@extends('design.navbar')
-@extends('design.footer')
-@extends('design.header')
-    <div class="container">
+@extends('design.base')
+@section('content')
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -50,7 +46,7 @@
             </div>
         </div>
     </div>
-
+@endsection
 
 
 

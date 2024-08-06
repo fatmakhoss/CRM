@@ -23,7 +23,7 @@ class ContratsController extends Controller
     {
         $request->validate([
             'client_id' => 'required|exists:clients,id',
-            'numero_contrat' => 'required|string',
+            'numero_contrat' => 'required|integer',
             'date_debut' => 'required|date',
             'date_fin' => 'required|date',
             'details' => 'nullable|string',
@@ -50,7 +50,7 @@ class ContratsController extends Controller
     {
         $request->validate([
             'client_id' => 'required|exists:clients,id',
-            'numero_contrat' => 'required|string',
+            'numero_contrat' => 'required|integer',
             'date_debut' => 'required|date',
             'date_fin' => 'required|date',
             'details' => 'nullable|string',

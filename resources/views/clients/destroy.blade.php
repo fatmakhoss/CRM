@@ -1,5 +1,4 @@
-@extends('layouts.base')
-
+@extends('design.base')
 @section('content')
 <div class="container">
     <h1>Confirmer la suppression</h1>

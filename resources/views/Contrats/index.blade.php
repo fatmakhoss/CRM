@@ -1,9 +1,5 @@
-{{-- @extends('layouts.base')
-@section('content') --}}
-@extends('design.navbar')
-@extends('design.footer')
-@extends('design.header')
-<div class="container">
+@extends('design.base')
+@section('content')
     <h1>Liste des Contrats</h1>
     <a href="{{ route('contrats.create') }}" class="btn btn-primary mb-3">Ajouter un Contrat</a>
 
@@ -28,7 +24,7 @@
             @foreach($contratsCount as $contrat)
                 <tr>
                     <td>{{ $contrat->id }}</td>
-                    <td>{{ $contrat->client->name }}</td>
+                    <td>{{ $contrat->client->nom }}</td>
                     <td>{{ $contrat->numero_contrat }}</td>
                     <td>{{ $contrat->date_debut }}</td>
                     <td>{{ $contrat->date_fin }}</td>
@@ -39,12 +35,12 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce contrat?')">Supprimer</button>
-                        </form>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
-
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+            </div>
+@endsection
 

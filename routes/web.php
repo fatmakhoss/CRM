@@ -85,7 +85,7 @@ Route::get('/users/destroy', [AdminController::class, 'destroy'])->name('admin.u
 Route::get('/users', [AdminController::class, 'index'])->name('admin.users.index');
 Route::get('users/edit/{id}', [AdminController::class, 'usersedit'])->name('admin.users.edit');
 Route::get('/settings', [AdminController::class, 'indexsettings'])->name('admin.settings.index');
-Route::post('/settings/update/{id}', [AdminController::class, 'usersupdate'])->name('admin.users.update');
+Route::get('/settings/update/{id}', [AdminController::class, 'usersupdate'])->name('admin.users.update');
 Route::get('/', [AdminController::class, 'admin'])->name('index');
 });
 
@@ -94,8 +94,8 @@ use App\Http\Controllers\twilioServiceController;
 Route::get('twilioService/send', [twilioServiceController::class, 'showsms'])->name('twilioService.form');
 Route::post('twilioService/send', [twilioServiceController::class, 'sendSms'])->name('twilioService.send');
 
- Route::get('/', function () {
-   return view('temp.adm');
+Route::get('/', function () {
+    return view('temp.adm');
 });
 
 

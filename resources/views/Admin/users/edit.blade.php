@@ -3,9 +3,9 @@
 
     <h1>Modifier l'Utilisateur</h1>
 
-    <form action="{{ route('admin.users.update', $users->id) }}" method="POST">
+    <form action="{{ route('admin.users.update', ['id' => $user->id]) }}"  method="POST">
         @csrf
-        @method('PUT') {{-- Utilisation de PUT pour la méthode de mise à jour --}}
+        @method('PUT')  {{-- Utilisation de PUT pour la méthode de mise à jour --}}
 
         <div class="form-group">
             <label for="nom_utilisateur">Nom utilisateur</label>

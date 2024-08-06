@@ -11,7 +11,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nom d'utilisateur</th>
+                                <th>Nom utilisateur</th>
                                 <th>Email</th>
                                 <th>Actions</th>
                             </tr>

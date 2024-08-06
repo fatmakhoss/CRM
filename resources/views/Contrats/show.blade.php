@@ -1,6 +1,5 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
-<div class="container">
     <h1>Détails du Contrat</h1>
 
     <div class="card">
@@ -17,8 +16,8 @@
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce contrat?')">Supprimer</button>
             </form>
             <a href="{{ route('contrats.index') }}" class="btn btn-secondary">Retour à la liste des Contrats</a>
+            </div>
         </div>
     </div>
-</div>
 @endsection
 
