@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
 <div class="container">
     <h1>Modifier le Contrat</h1>

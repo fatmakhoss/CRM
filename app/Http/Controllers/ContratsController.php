@@ -3,25 +3,28 @@
 namespace App\Http\Controllers;use Illuminate\Http\Request;
 use App\Models\Contrats;
 use App\Models\Clients;
+use GuzzleHttp\Promise\Create;
 
 class ContratsController extends Controller
 {
 
     public function index()
     {
+
         $contratsCount= Contrats::with('client')->get();
         return view('contrats.index', compact('contratsCount'));
     }
 
     public function create()
     {
+
         $clients = Clients::all();
         return view('contrats.create', compact('clients'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'client_id' => 'required|exists:clients,id',
             'numero_contrat' => 'required|integer',
             'date_debut' => 'required|date',
@@ -29,7 +32,7 @@ class ContratsController extends Controller
             'details' => 'nullable|string',
         ]);
 
-        $contrat = Contrats::create($request->all());
+        $contrats=contrats::create($request->all());
         return redirect()->route('contrats.index')->with('success', 'Contrat créé avec succès.');
     }
 

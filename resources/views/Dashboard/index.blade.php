@@ -1,7 +1,7 @@
-{{-- @extends('layouts.base')
-@section('content') --}}
+@extends('design.base')
+@section('content')
 
-    <div class="container">
+<div class="container p-3">
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -32,11 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Nombre de clients</h5>
                         <p class="card-text">{{ $clientsCount }}</p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
     </div>
-
+@endsection
 

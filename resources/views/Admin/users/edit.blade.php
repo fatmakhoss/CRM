@@ -1,6 +1,6 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
-
+<div class="container p-2">
     <h1>Modifier l'Utilisateur</h1>
 
     <form action="{{ route('admin.users.update', ['id' => $user->id]) }}"  method="POST">
@@ -28,4 +28,5 @@
         <button type="submit" class="btn btn-primary">Mettre à jour</button>
         <a href="{{ route('admin.users.index') }}" class="btn btn-secondary">Retour</a>
     </form>
+    </div>
 @endsection

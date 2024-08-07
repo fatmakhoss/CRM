@@ -1,11 +1,11 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-header">creatin nouvelle Lead</div>
-                    
+
                     <div class="card-body">
                         <form action="{{ route('leads.store') }}" method="POST">
                             @csrf
@@ -35,9 +35,6 @@
 
                             <button type="submit" class="btn btn-primary">Create</button>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        
     </div>
 @endsection

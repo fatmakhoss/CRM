@@ -1,5 +1,6 @@
 @extends('design.base')
 @section('content')
+<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -46,9 +47,7 @@
                             <button type="submit" class="btn btn-primary">Mettre à jour</button>
                             <a href="{{ route('clients.index')}}" class="btn btn-secondary">Annuler</a>
                         </form>
-                    </div>
-                </div>
-            </div>
+
         </div>
  @endsection
 

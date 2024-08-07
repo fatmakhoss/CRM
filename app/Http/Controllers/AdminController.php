@@ -40,8 +40,7 @@ class AdminController extends Controller
         $user = Users::findOrFail($id);
         $user->update($request->all());
 
-        return redirect()->route('Admin.users.index')->with('success', 'Utilisateur mis à jour avec succès');
-    }
+        return redirect()->route('Admin.users.index')->with('success', 'Utilisateur créé avec succès.');    }
     public function indexsettings()
     {
         $users=Users::all();

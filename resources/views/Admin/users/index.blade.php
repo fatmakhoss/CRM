@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
 <div class="container">
     <h1>Liste des Utilisateurs</h1>
@@ -17,7 +17,7 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->nom_utilisateur }}</td>
                 <td>{{ $user->email }}</td>
-                
+
                 <td>
                     <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning">edit</a>
                     <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" style="display:inline;">

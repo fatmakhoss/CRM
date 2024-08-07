@@ -1,8 +1,6 @@
-{{-- -- @extends('layouts.base')
-@section('content') -- --}}
-@extends('design.navbar')
-@extends('design.footer')
-@extends('design.header')
+@extends('design.base')
+@section('content')
+<div class="container">
     <div class="cols">
         <div class="col-md-6">
             <div class="card">
@@ -19,10 +17,8 @@
                     <!-- Ajoutez ici des liens ou des boutons pour des actions rapides -->
                     <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Gérer les Utilisateurs</a>
                     <!-- Ajoutez d'autres liens selon vos besoins -->
-                </div>
-            </div>
-        </div>
+
     </div>
 
-
+@endsection
 

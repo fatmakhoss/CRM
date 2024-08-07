@@ -1,6 +1,6 @@
  @extends('design.base')
 @section('content')
-
+<div class="container p-4">
 
                         <form action="{{ route('clients.store') }}" method="POST">
                             @csrf
@@ -31,9 +31,7 @@
                             <button type="submit" class="btn btn-primary">Créer</button>
                             <a href="{{ route('clients.index') }}" class="btn btn-secondary">Annuler</a>
                         </form>
-                    </div>
-                </div>
-            </div>
+</div>
 @endsection
 
 

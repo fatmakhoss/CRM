@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('design.base')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +8,11 @@
     <style>
         .move-right {
             margin-right: 5000px;
+
         }
     </style>
     <title>Admin</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="('js/app.js')">
 </head>
 <body>
 <div class="container">

@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <h1>Envoyer un SMS</h1>
 

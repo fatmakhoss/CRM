@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
         <h1>Supprimer l'utilisateur</h1>

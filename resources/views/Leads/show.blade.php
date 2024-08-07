@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
         <div class="card">
@@ -27,7 +27,6 @@
 
                 <a href="{{ route('leads.edit',$lead->id) }}" class="btn btn-primary">retour</a>
                 <!-- Add a delete button if required -->
-            </div>
-        </div>
+
     </div>
 @endsection

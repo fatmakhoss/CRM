@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -26,9 +26,7 @@
                         </div>
 
                         <a href="{{ route('interactions.index') }}" class="btn btn-secondary">Retour</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     </div>
     @endsection

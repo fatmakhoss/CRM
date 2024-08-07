@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
                 <div class="card">
@@ -35,9 +35,6 @@
 
                             <button type="submit" class="btn btn-primary">Update </button>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        
     </div>
 @endsection

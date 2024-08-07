@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -22,9 +22,6 @@
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                             <a href="{{ route('interactions.index') }}" class="btn btn-secondary">Annuler</a>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
     </div>
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
 
     <div class="container">
@@ -45,10 +45,7 @@
                             <button type="submit" class="btn btn-primary">Mettre à jour</button>
                             <a href="{{ route('interactions.index') }}" class="btn btn-secondary">Annuler</a>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 @endsection
 

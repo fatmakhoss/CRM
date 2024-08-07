@@ -1,6 +1,6 @@
 @extends('design.base')
 @section('content')
-<div class="container">
+<div class="container P-4">
     <h1>Confirmer la suppression</h1>
     <p>Êtes-vous sûr de vouloir supprimer le client suivant ?</p>
     <p>Nom : {{ $client->nom }}</p>

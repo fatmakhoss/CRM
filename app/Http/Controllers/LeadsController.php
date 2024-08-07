@@ -17,21 +17,21 @@ class LeadsController extends Controller
 
     public function create()
     {
+        $clients = Clients::all();
         return view('leads.create', compact('clients'));
     }
 
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'client_id' => 'required|exists:clients,id',
             'date' => 'required|date',
             'lieu' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
 
-        Leads::create($validatedData);
-
+        $leads = leads::create($request->all());
         return redirect()->route('leads.index')->with('success', 'Lead créé avec succès');
     }
 
@@ -65,7 +65,7 @@ class LeadsController extends Controller
         return redirect()->route('leads.index')->with('success', 'Lead mis à jour avec succès');
     }
 
- 
+
     public function destroy(Leads $lead)
     {
         $lead->delete();

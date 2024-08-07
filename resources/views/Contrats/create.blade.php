@@ -1,5 +1,6 @@
-@extends('layouts.base')
+@extends('design.base')
 @section('content')
+<div class="container">
     <h1>Ajouter un Contrat</h1>
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf
@@ -8,7 +9,7 @@
             <label for="client_id">Client</label>
             <select name="client_id" id="client_id" class="form-control">
                 @foreach ($clients as $client)
-                    <option value="{{ $client->id }}">{{ $client->name }}</option>
+                    <option value="{{ $client->id }}">{{ $client->nom}}</option>
                 @endforeach
             </select>
         </div>

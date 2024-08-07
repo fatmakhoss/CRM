@@ -28,6 +28,7 @@ Route::get('/clients/{id}/destroy', [ClientsController::class, 'destroy'])->name
 use App\Http\Controllers\InteractionsController;
 Route::get('interactions', [InteractionsController::class,'index'])->name('interactions.index');
 Route::get('/interactions/create', [InteractionsController::class, 'create'])->name('interactions.create');
+Route::get('/interactions/store', [InteractionsController::class, 'store'])->name('interactions.store');
 Route::get('/interactions/show/{id}', [InteractionsController::class, 'show'])->name('interactions.show');
 Route::get('/interacions/edit/{id}', [InteractionsController::class, 'edit'])->name('interactions.edit');
 Route::put('/interactions/update/{id}', [InteractionsController::class, 'update'])->name('interactions.update');
@@ -36,6 +37,7 @@ Route::get('/interactions/{id}/destroy', [InteractionsController::class, 'destro
 use App\Http\Controllers\ContratsController;
 Route::get('contrats', [ContratsController::class,'index'])->name('contrats.index');
 Route::get('/contrats/create', [ContratsController::class, 'create'])->name('contrats.create');
+Route::post('/contrats/store', [ContratsController::class, 'store'])->name('contrats.store');
 Route::get('/contrats/show/{id}', [ContratsController::class, 'show'])->name('contrats.show');
 Route::get('/contrats/edit/{id}', [ContratsController::class, 'edit'])->name('contrats.edit');
 Route::put('/contrats/update/{id}', [ContratsController::class, 'update'])->name('contrats.update');
@@ -56,6 +58,7 @@ use App\Http\Controllers\LeadsController;
 use Illuminate\Support\Facades\Auth;
 Route::get('/leads',[ LeadsController::class,'index'])->name('leads.index');
 Route::get('/leads/create', [LeadsController::class, 'create'])->name('leads.create');
+Route::get('/leads/store', [LeadsController::class, 'store'])->name('leads.store');
 Route::get('/leads/show/{id}', [LeadsController::class, 'show'])->name('leads.show');
 Route::get('/leads/edit/{id}', [LeadsController::class, 'edit'])->name('leads.edit');
 Route::put('/leads/update/{id}', [LeadsController::class, 'update'])->name('leads.update');
@@ -85,7 +88,7 @@ Route::get('/users/destroy', [AdminController::class, 'destroy'])->name('admin.u
 Route::get('/users', [AdminController::class, 'index'])->name('admin.users.index');
 Route::get('users/edit/{id}', [AdminController::class, 'usersedit'])->name('admin.users.edit');
 Route::get('/settings', [AdminController::class, 'indexsettings'])->name('admin.settings.index');
-Route::get('/settings/update/{id}', [AdminController::class, 'usersupdate'])->name('admin.users.update');
+Route::put('/settings/update/{id}', [AdminController::class, 'usersupdate'])->name('admin.users.update');
 Route::get('/', [AdminController::class, 'admin'])->name('index');
 });
 
