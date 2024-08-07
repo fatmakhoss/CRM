@@ -1,17 +1,6 @@
  @extends('design.base')
 @section('content')
 
-            <div class="card-header">Créer un nouveau client</div>
-                    <div class="card-body">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
                         <form action="{{ route('clients.store') }}" method="POST">
                             @csrf
