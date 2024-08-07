@@ -1,6 +1,5 @@
 @extends('layouts.base')
 @section('content')
-<div class="container">
     <h1>Ajouter un Contrat</h1>
     <form action="{{ route('contrats.store') }}" method="POST">
         @csrf

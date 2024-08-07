@@ -27,9 +27,6 @@
                         </div>
 
                         <a href="{{ route('clients.index') }}" class="btn btn-secondary">Retour</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    
     </div>
     @endsection
